@@ -7,18 +7,20 @@ pipeline {
     value=true
   }
   stages {
+     
     stage('Build') {
+      when{
+
+          expression{
+            value== true
+          }
+        }
       steps {
         echo 'build success'
         // echo "${credential}"
         
-        when{
-
-          expression{
-            value
-          }
-        }
-       echo "omar"
+       
+       
       }
     }
 
