@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'build success'
-        
+        echo '$BRANCH_NAME'
       }
     }
 
@@ -38,7 +38,6 @@ pipeline {
         echo 'success code'
       }
     }
-   
 
   }
 }
