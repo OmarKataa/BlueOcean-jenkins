@@ -4,10 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'build success'
-        retry(count: 3) {
-          sh 'www'
-        }
-
+        
       }
     }
 
@@ -35,11 +32,13 @@ pipeline {
       }
     }
 
-    stage('notify') {
+    stage('code') {
       steps {
-        echo 'success'
+        input(message: 'are you sure?', ok: 'yes')
+        echo 'success code'
       }
     }
+   
 
   }
 }
