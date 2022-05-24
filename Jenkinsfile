@@ -8,13 +8,17 @@ pipeline {
   //   // credential=credentials('id')
   //   // value = true
   // }
+  parameters{
+
+    choice(name: 'value',choices: true , description: '')
+  }
   stages {
      
     stage('Build') {
       when{
 
           expression{
-            value == true
+            params.value == true
           }
         }
       steps {
