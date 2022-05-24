@@ -1,18 +1,20 @@
+
+def value = true
 pipeline {
   agent any
 
-  environment{
+  // environment{
 
-    // credential=credentials('id')
-    value = true
-  }
+  //   // credential=credentials('id')
+  //   // value = true
+  // }
   stages {
      
     stage('Build') {
       when{
 
           expression{
-            return env.value == true
+            value == true
           }
         }
       steps {
