@@ -82,9 +82,9 @@ pipeline {
         }
       steps {
 
-        
+        script{
         echo "name ${value}"
-        // input(message: 'are you sure?', ok: 'yes')
+        }// input(message: 'are you sure?', ok: 'yes')
         echo 'success code'
       }
     }
