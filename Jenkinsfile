@@ -1,9 +1,15 @@
 pipeline {
   agent any
+
+  environment{
+
+    credential=credentials('id')
+  }
   stages {
     stage('Build') {
       steps {
         echo 'build success'
+        echo "${credential}"
         
       }
     }
