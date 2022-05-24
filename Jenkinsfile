@@ -71,7 +71,19 @@ pipeline {
     }
 
     stage('code') {
+
+      input{
+
+          message "enter name"
+          ok "Done"
+          parameters{
+            choice(name: "value", choices:['omar','ahmad'],description:"")
+          }
+        }
       steps {
+
+        
+        echo "name ${value}"
         // input(message: 'are you sure?', ok: 'yes')
         echo 'success code'
       }
