@@ -12,7 +12,7 @@ pipeline {
       when{
 
           expression{
-            value== true
+            value == true
           }
         }
       steps {
@@ -29,6 +29,7 @@ pipeline {
         stage('Test Stage') {
           steps {
             echo 'test1'
+            echo "${value}"
           }
         }
 
