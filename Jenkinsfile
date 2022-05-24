@@ -3,7 +3,7 @@ pipeline {
 
   environment{
 
-    credential=credentials('id')
+    // credential=credentials('id')
   }
   stages {
     stage('Build') {
@@ -34,8 +34,11 @@ pipeline {
 
     stage('Deploy') {
       steps {
-        input(message: 'are you sure?', ok: 'yes')
+        // input(message: 'are you sure?', ok: 'yes')
         echo 'success deploy'
+        withCredentials([usernamePassword(credentials:'20',usernameVariable:user,passwordVariable:pwd)])
+
+        sh "credentials ${user},${pwd}"
       }
     }
 
