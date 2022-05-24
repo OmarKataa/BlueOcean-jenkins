@@ -12,7 +12,7 @@ pipeline {
       when{
 
           expression{
-            value == true
+            return value == true
           }
         }
       steps {
