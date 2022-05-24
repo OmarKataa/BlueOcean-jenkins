@@ -10,7 +10,7 @@ pipeline {
   // }
   parameters{
 
-    choice(name: 'value',choices: [true] , description: '')
+    choice(name: 'value',choices: ['true'] , description: '')
   }
   stages {
      
@@ -18,11 +18,20 @@ pipeline {
       when{
 
           expression{
-            params.value == true
+            params.value == 'true'
           }
         }
       steps {
+
+        script{
+
+          gv = load "fn.groovy"
+        }
         echo 'build success'
+        script{
+
+          gv.fn()
+        }
         // echo "${credential}"
         
        
