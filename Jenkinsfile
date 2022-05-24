@@ -3,14 +3,15 @@ pipeline {
 
   environment{
 
-    credential=credentials('id')
+    // credential=credentials('id')
+    value=true
   }
   stages {
     stage('Build') {
       steps {
         echo 'build success'
-        echo "${credential}"
-        
+        // echo "${credential}"
+        sh $value=false
        
       }
     }
