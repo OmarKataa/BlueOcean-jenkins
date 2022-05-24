@@ -11,8 +11,14 @@ pipeline {
       steps {
         echo 'build success'
         // echo "${credential}"
-        sh $value=false
-       
+        
+        when{
+
+          expression{
+            value
+          }
+        }
+       echo "omar"
       }
     }
 
