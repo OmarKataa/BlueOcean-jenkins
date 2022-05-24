@@ -40,14 +40,14 @@ pipeline {
     
       
        
-       sh "credentials ${credential}"
+      //  sh "credentials ${credential}"
       
       }
     }
 
     stage('code') {
       steps {
-        input(message: 'are you sure?', ok: 'yes')
+        // input(message: 'are you sure?', ok: 'yes')
         echo 'success code'
       }
     }
