@@ -37,9 +37,11 @@ pipeline {
       steps {
         // input(message: 'are you sure?', ok: 'yes')
         echo 'success deploy'
-        withCredentials([usernamePassword(credentials:'20',usernameVariable:user,passwordVariable:pwd)])
-
-        sh "credentials ${user},${pwd}"
+        withCredentials([usernamePassword(credentials: '20', usernameVariable: user, passwordVariable: pwd)])
+      {
+       
+       sh "credentials ${user},${pwd}"
+      }
       }
     }
 
