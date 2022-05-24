@@ -1,10 +1,10 @@
 pipeline {
   agent any
 
-  environment{
+  // environment{
 
-    // credential=credentials('id')
-  }
+  //   // credential=credentials('id')
+  // }
   stages {
     stage('Build') {
       steps {
