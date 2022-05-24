@@ -77,13 +77,13 @@ pipeline {
           message "enter name"
           ok "Done"
           parameters{
-            choice(name: "value", choices:['omar','ahmad'],description:"")
+            choice(name: "name", choices:['omar','ahmad'],description:"")
           }
         }
       steps {
 
         script{
-        echo "name ${value}"
+        echo "name ${name}"
         }// input(message: 'are you sure?', ok: 'yes')
         echo 'success code'
       }
