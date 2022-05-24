@@ -10,7 +10,7 @@ pipeline {
   // }
   parameters{
 
-    choice(name: 'value',choices: ['true'] , description: '')
+    choice(name: 'value',choices: [true] , description: '')
   }
   stages {
      
@@ -18,7 +18,7 @@ pipeline {
       when{
 
           expression{
-            params.value == 'true'
+            params.value == true
           }
         }
       steps {
