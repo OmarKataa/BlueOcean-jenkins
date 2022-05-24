@@ -4,7 +4,7 @@ pipeline {
   environment{
 
     // credential=credentials('id')
-    value=true
+    value = true
   }
   stages {
      
@@ -12,7 +12,7 @@ pipeline {
       when{
 
           expression{
-            ${value} == true
+            value == true
           }
         }
       steps {
