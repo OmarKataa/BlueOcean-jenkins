@@ -11,6 +11,7 @@ pipeline {
         echo 'build success'
         echo "${credential}"
         
+       
       }
     }
 
@@ -44,7 +45,6 @@ pipeline {
         echo 'success code'
       }
     }
-   
 
   }
 }
