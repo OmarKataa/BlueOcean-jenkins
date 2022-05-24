@@ -5,7 +5,7 @@ pipeline {
       steps {
         echo 'build success'
         echo '$BRANCH_NAME'
-        sh 'echo $BRANCH_NAME'
+        sh '$credentials(\'20\')'
       }
     }
 
